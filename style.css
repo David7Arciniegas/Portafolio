@@ -8,41 +8,33 @@
 }
 
 html{
-
-    max-width: 1;
     
+    max-width: 1400px
     font-family 'Inter';
 
 }
 
 
 body {
-    display: grid;
-    padding: 1.5rem;
+    
     font-family: 'Inter';
     background-color: #1f1d2c;
     
 }
 
-.contenedor-grid-general{
-    width: 100%;
-    height: 2000px;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: stretch;
-    grid-template-columns: repeat(5, 83.3px);
-    grid-template-rows: repeat(12, auto);
+
     
+
+.contenedor-general{
+    max-width: 100%;
 }
 
-
-
 .navbar{
-    text-align: right;
+
+    padding-top: 2rem;
+    display: flex;
+    justify-content: end;
     background-color: rgba(36, 38, 53, .1 );
-    padding: .7rem;
-    width: 1000px;
-    height: 40px;
     z-index: 20;
 }
 
@@ -50,7 +42,6 @@ body {
 
 .navbar> ul > li{
 
-    align-items: right;
     list-style: none;
     display: inline-block;
     margin-left: 2rem;
@@ -59,6 +50,7 @@ body {
 }
 
 .navbar > ul > li > a{
+    justify-content: end;
     font-size: 1rem;
     color: #ffffff;
     text-decoration: none;
@@ -69,7 +61,91 @@ body {
     color: #f1a600;
 }
 
-/*
+
+.square{
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.square > img{
+    
+    width: 50%;
+    height: 50em;
+    position: absolute;
+    z-index: 10;
+}
+
+
+.container{
+    padding-bottom: 7rem;
+
+
+}
+.header{
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    display: block;
+
+}
+
+.header > h3{
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.header > article{
+    color: #ffffff;
+    font-size: 30px
+}
+
+.header{
+    color: #ffffff;
+}
+
+
+
+.a{
+
+    display: flex;
+    color: #f1a600;
+    font-size: 40px;
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.b{
+    font-weight: 400;
+    color: #ffffff;
+    
+}
+
+.c{
+    display: flex;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+
+
+.socialmedia{
+    padding-left: 5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.socialmedia > img{
+    width: 3rem;
+}
+
+.acercaDeMi{
+    padding-top: 3rem;
+}
+
+
+
 #icon-menu{
     width: 50px;
     height: 50px;
@@ -103,86 +179,10 @@ body {
        
        
     }
-
-    @media screen and (max-width: 600px) {
-        #icon-menu{
-            display: flex;
-            width: 50px;
-            height: 50px;
-            grid-column: 7/auto;
-            grid-row: 2/11;
-            cursor: pointer;
-            
-        }
-
-        .navbar{
-            display: none;
-        }
-
-        body{
-            width: 500px;
-            font-size:larger ;
-        }
-        .acercaDeMi{
-            width: auto;
-            font-size: larger;
-        }
-
-
-        
-    }
-
-
-
-.vector1 {
-    background-color: rgba(67, 70, 90, 0.1);
-    z-index: 10;
-    width: 100%;
-    grid-column: 5/15;
-    grid-row: 1/6;
+      
     
-}
-
-
-
-.nombre {
-    font-size: 60px;
-    grid-column: 2/9;
-    grid-row: 2/3;
-    color: white;
-    height: 40px;
-    width: 1000px;
-    padding: 0px;
-    align-items: stretch;
-    z-index: 23;
-}
-
-.lorem1 {
-    font-size: 30px;
-    align-items:stretch;
-    height: auto;
-    width: auto;
-    grid-column: 2/9;
-    grid-row: 3/4;
-    color: white;
-    padding: 0px;
-    z-index: 23;
-}
-
-.color5 {
-    color:#f1a600;
-}
-
-.iconos{
-    
-    grid-column: 2/5;
-    grid-row: 4/5;
-    align-items: stretch;
-    display: inline;
-}
-
 .acercaDeMi {
-    height: 25rem;
+    height: 30rem;
     background-color: rgba(67, 70, 90, 0.1);
     color: white;
     text-align: center;
@@ -193,7 +193,7 @@ body {
 
 
 
-.Logos1{
+.acercaDeMiLogos{
 
     height: 8rem;
     align-items: center;
@@ -204,34 +204,25 @@ body {
 
 }
 
-.Logos1 .itemTextoLogos > img{
-    height: 10rem;
-}
 
 
 
 
 .itemTextoLogos{
-    display: grid;
     margin: 6rem;
-    grid-template-columns: 2;
+    
 }
 
-
-
-.acerca {
-    font-size: 30px;
-}
 
 .experiencia {
-    
+
+    gap: 3rem;
+    padding-top: 4rem;
+    justify-content: center;
     background-color: #1f1d2c;
     display: grid;
-    margin: 10px auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 20px;
-    grid-column: 3/11;
-    grid-row: 12/17;
+    margin: 4rem; auto;
+    
     grid-template-areas: "experiencia experiencia experiencia experiencia"
                          "dos tres cuatro once"
                          "cinco seis siete once"
@@ -240,7 +231,7 @@ body {
 
 .experiencia > .uno{
 
-    display: flex;
+    padding-bottom: 3rem;
     margin-right: 2rem;
     text-align: center;
 
@@ -331,18 +322,14 @@ body {
     align-items: center;
 }
 
+.titulohabilidades{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
 
-.container2{
-
-    width: auto;
-    height: 2000px;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: stretch;
-    grid-template-columns: repeat(15, 83.3px);
-    grid-template-rows: repeat(12, auto);
-    align-items: right;
 }
+
 .Habilidades{
     
     max-width: 100%;
@@ -351,11 +338,6 @@ body {
     justify-content: center;
 
 }
-
-
-
-
-
 
 .porcentajes > p{
     
@@ -377,14 +359,34 @@ body {
 
     display: flex;
     justify-content: center;
-    padding-left: 3rem;
+    
     color: #ffffff;
 
 }
 
+
+.square2{
+    
+  
+    
+}
+
+.square2 > img{
+
+    display: flex;
+    width: 10rem;
+    
+    
+    
+   
+}
+
+
+
+
 .wrapper{
 
-   margin-left: 5rem;
+   margin-left: 
    text-align: center;
    margin-top: 4rem;
         display: grid;
@@ -514,3 +516,54 @@ font-weight: 600;
 
 /* Responsive Design */
 
+@media screen and (max-width: 600px) {
+
+
+    #icon-menu{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        grid-column: 7/auto;
+        grid-row: 2/11;
+        cursor: pointer;
+        
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .square{
+    width: 100%;
+    height: 9rem;
+    position: absolute;
+    z-index: 0;
+    }
+    
+    .header{
+        padding-left: none;
+    }
+
+    .acercaDeMi{
+        padding: 2rem;
+    }
+
+
+    .miportafolio{
+
+
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 1px;
+   
+
+    }
+
+
+
+
+   
+    }
+
+
+    

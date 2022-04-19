@@ -15,10 +15,6 @@ html{
 }
 
 
-
-
-
-
 body {
     display: grid;
     padding: 1.5rem;
@@ -27,7 +23,7 @@ body {
     
 }
 
-.container{
+.contenedor-grid-general{
     width: auto;
     height: 2000px;
     display: grid;

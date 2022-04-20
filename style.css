@@ -24,9 +24,99 @@ body {
     
 }
 
-#icon-menu
+/* Menu Hamburguesa*/
 
-    
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #f1a600;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #f1a600;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #f1a600;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Fin Menu Hamburguesa*/
 
 .contenedor-general{
 
@@ -73,8 +163,6 @@ body {
 
 
 .foto{
-
-    
     display: flex;
     justify-content: center;
     padding-left: 15rem;
@@ -82,26 +170,20 @@ body {
 }
 
 .foto > img{
-   
-    
     position: absolute; z-index: 10;
-    width: 17rem;
-    
-  
+    width: 20rem;
 }
 
 
 .square{
     
     position: relative; z-index: 5;
-   
     display: flex;
     justify-content: end;
     align-items: center;
 }
 .square > img{
     
-   
     width: 50%;
     height: 50em;
     position: absolute;
@@ -181,43 +263,10 @@ body {
 
 
 
-#icon-menu{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 20px;
-    color: #ffffff;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-*/
 
-#icon-menu > img{
-    cursor: pointer;
-    
-  }
-
-
-#icon-menu{
-    display: flex;
-    width: 50px;
-    height: 50px;
-    grid-column: 7/auto;
-    grid-row: 2/11;
-    cursor: pointer;
-    display: none;
-       
-       
-    }
-      
     
 .acercaDeMi {
-    height: 30rem;
+    height: 40rem;
     background-color: rgba(67, 70, 90, 0.1);
     color: white;
     text-align: center;
@@ -226,28 +275,24 @@ body {
     
 }
 
-
-
 .acercaDeMiLogos{
-
-    height: 8rem;
-    align-items: center;
-    margin: 3rem;
+    
     display: flex;
-    display: flex;
+    gap: 4rem;
     justify-content:center
 
 }
 
-
-
-
-
-.itemTextoLogos{
-    margin: 6rem;
-    
+.acercaDeMiLogos > img{
+       
 }
 
+.itemTextoLogos > img{
+
+    width: 10rem;
+}
+
+    
 
 .experiencia {
 
@@ -552,22 +597,12 @@ font-weight: 600;
 
     
     .foto{
-        margin-top: ;
+        padding-right: 1rem;
         position: absolute
         justify-content: center;
        
     }
-    .foto > img{
-        
-        width: 12rem;
-     
-   
-    }
-
-
-    .navbar{
-        display: none;
-    }
+  
 
     .square{
     width: 100%;
@@ -586,20 +621,52 @@ font-weight: 600;
 
 
     .miportafolio{
-
-
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 1px;
 
     }
+
+    .itemTextoLogos > img{
+      width: 8rem;
+    }
     }
 
 
-    @media screen and (max-width: 480px) and (max-width:768px){
+    @media screen and (max-width: 480px){
 
+    html{
+        font-size: smaller;
+    }
 
+    .foto > img{
+       padding-right: 1rem;
+       width: 230px;
+    }
 
+  .itemTextoLogos > img{
+    width: 5rem;
+   }
 
+   .imagenescontacto{
+       padding-left: 3rem;
+       font-size: smaller;
+   }
+   
+   .telefono > img{
+    width: 50px;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+     
+
+   }
+
+   .mail > img{
+    width: 50px;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+
+}
 
     }
+

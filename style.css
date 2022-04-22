@@ -638,10 +638,10 @@ font-weight: 600;
         padding-left: 1rem;
         width: 280px;
      }
+
     .foto{
        
         padding-right: 1rem;
-        position: absolute
         justify-content: center;
        
     }
@@ -673,8 +673,7 @@ font-weight: 600;
     .itemTextoLogos > img{
       width: 8rem;
     }
-    }
-
+    
 
     @media screen and (max-width: 480px){
 

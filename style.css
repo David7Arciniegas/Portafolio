@@ -125,6 +125,8 @@ body {
     z-index: 10;
 }
 
+
+
 .navbar{
     
     padding-right: 6rem;
@@ -253,6 +255,7 @@ body {
     gap: 2rem;
 }
 
+
 .socialmedia > img{
     width: 3rem;
 }
@@ -261,8 +264,21 @@ body {
     padding-top: 3rem;
 }
 
+.CV {
 
+    font-weight: 100;
+    display: flex;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    color: #ffffff;
+}
 
+.CV > a{
+
+    font-size: larger;
+    font-weight: 600;
+    color: #ffffff;
+}
 
     
 .acercaDeMi {
@@ -465,12 +481,11 @@ body {
 
 .wrapper{
 
-   margin-left: 
    text-align: center;
    margin-top: 4rem;
         display: grid;
         grid-template-columns: repeat(2, 3fr);
-        grid-gap: 1px;
+        grid-gap: 3px;
         grid-auto-rows: minmax(400px, auto);
 }
 
@@ -595,8 +610,36 @@ font-weight: 600;
 
 @media screen and (max-width: 768px) {
 
+    .wrapper > div{
+        gap: 3rem;
+    }
+
+
+    .wrapper > div > img{
+        width: 75%;
+        height: auto;
+    }
+
+    .wrapper{
+        height: auto;
+        margin-bottom: 6rem;
+        display: flex;
+        display: block;
+        justify-content: space-around;
+    }
+
     
+
+    .header{
+        font-size: 10px;
+    }
+
+    .foto > img{
+        padding-left: 1rem;
+        width: 280px;
+     }
     .foto{
+       
         padding-right: 1rem;
         position: absolute
         justify-content: center;
@@ -639,6 +682,14 @@ font-weight: 600;
         font-size: smaller;
     }
 
+
+    .wrapper > div > img{
+        width: 90%;
+        height: auto;
+    }
+
+
+
     .foto > img{
        padding-right: 1rem;
        width: 230px;
@@ -670,3 +721,17 @@ font-weight: 600;
 
     }
 
+
+
+    @media screen and (max-width: 400px) {
+
+        .foto > img{
+            padding-right: 1rem;
+            width: 200px;
+         }
+
+         body{
+             font-size: smaller;
+         }
+
+    }
